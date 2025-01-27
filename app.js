@@ -6,7 +6,12 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+let corsOption = {
+  origin: "*",
+  optionSuccessStatus: 200,
+  methods: "GET, POST"
+}
+app.use(cors(corsOption));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
@@ -80,7 +85,7 @@ app.delete("/orders/:orderId", async (req, res) => {
   }
 });
 
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-module.exports = app;
+// module.exports = app;
