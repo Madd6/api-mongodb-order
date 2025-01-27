@@ -6,11 +6,11 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-let corsOption = {
+const corsOption = {
   origin: "*",
   optionSuccessStatus: 200,
-  methods: "GET, POST"
-}
+  methods: ["GET", "POST", "PATCH", "DELETE"] // tambahkan semua methods yang digunakan
+};
 app.use(cors(corsOption));
 
 // Connect to MongoDB
