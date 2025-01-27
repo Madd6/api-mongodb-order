@@ -1,7 +1,7 @@
 {
   "name": "api-mongodb-order",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
@@ -10,12 +10,20 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madd6/api-mongodb-order.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Madd6/api-mongodb-order/issues"
+  },
+  "homepage": "https://github.com/Madd6/api-mongodb-order#readme",
+  "description": ""
 }
- 
